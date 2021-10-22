@@ -79,7 +79,7 @@ function createManager() {
            message: 'What is their email address?'
        }
     ]).then(({name, id, officeNumber, email}) => {
-       const manager = new Manager(name, id, officeNumber, email);
+       const manager = new Manager(name, id, email, officeNumber);
        team.push(manager);
        console.log(team);
        teamAddition();
@@ -110,7 +110,7 @@ function createEngineer() {
            message: 'What is their email address?'
        }
     ]).then(({name, id, github, email}) => {
-       const engineer = new Engineer(name, id, github, email);
+       const engineer = new Engineer(name, id, email, github);
        team.push(engineer);
        console.log(team);
        teamAddition();
@@ -141,7 +141,7 @@ function createIntern() {
            message: 'What is their address?'
        }
     ]).then(({name, id, school, email}) => {
-       const intern = new Intern(name, id, school, email);
+       const intern = new Intern(name, id, email, school);
        team.push(intern);
        console.log(team);
        teamAddition();
